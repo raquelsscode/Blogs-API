@@ -29,8 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE
     }},
     {
-        updatedAt: false,
-        underscored: true,
+        timestamps: false,
         tableName: 'BlogPosts',
     });
  
@@ -38,10 +37,6 @@ module.exports = (sequelize, DataTypes) => {
          BlogPost.belongsTo(models.User, {
              foreignKey: 'userId',
              as: 'user',
-         }),
-    BlogPost.hasMany(models.PostCategorie, {
-      foreignKey: 'postId',
-      as: 'post',
     });
   }
  

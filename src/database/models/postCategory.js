@@ -11,8 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
     }},
     {
-        updatedAt: false,
-        underscored: true,
+        timestamps: false,
         tableName: 'PostCategories',
     });
  
