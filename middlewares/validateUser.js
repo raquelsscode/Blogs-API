@@ -1,7 +1,7 @@
 const validateUser = (req, res, next) => {
     const { email, password, displayName } = req.body;
 
-//Expressão regular para validação de email com regex em "https://pt.stackoverflow.com/questions/1386/express%C3%A3o-regular-para-valida%C3%A7%C3%A3o-de-e-mail"
+// Expressão regular para validação de email com regex em "https://pt.stackoverflow.com/questions/1386/express%C3%A3o-regular-para-valida%C3%A7%C3%A3o-de-e-mail"
     const validateEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
 
     if (displayName.length < 8) {
@@ -22,7 +22,6 @@ const validateUser = (req, res, next) => {
       });
     }
 
-  
     next();
   };
   
