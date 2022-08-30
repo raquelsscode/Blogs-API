@@ -18,8 +18,8 @@ const categories = async (req, res) => {
 
 const getAll = async (_req, res) => {
     try {
-      const categories = await categoriesServices.getAll(); 
-      return res.status(200).json(categories);
+      const category = await categoriesServices.getAll(); 
+      return res.status(200).json(category);
     } catch (err) {
       return res.status(500).json({ message: 'Server Error', error: err.message });
     }
