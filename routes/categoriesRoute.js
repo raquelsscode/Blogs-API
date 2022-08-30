@@ -8,5 +8,6 @@ const categoriesRoute = Router();
 
 categoriesRoute.post('/', tokenAuth.validateToken, isValid.validateCategory, 
 categoriesControllers.categories);
+categoriesRoute.get('/', tokenAuth.validateToken, categoriesControllers.getAll);
 
 module.exports = categoriesRoute;
